@@ -20,6 +20,9 @@ const bodyParser = require("body-parser");
 
 //using cors for avoiding cross origin resource sharing error while sending req to server
 app.use(cors());
+app.use(cors({
+  origin: 'https://grand-biscochitos-02a454.netlify.app/'
+}));
 
 //middlewares for accepting incoming json and parsing data
 app.use(express.json());
